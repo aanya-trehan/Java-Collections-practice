@@ -28,7 +28,20 @@ class Main {
 ## Question 35: Implement a Queue using the LinkedList class
 
 ```java
+import java.util.*;
 
+class Main {
+    public static void main(String[] args) {
+        Queue<Integer> q = new LinkedList<>();
+        q.add(10);
+        q.add(20);
+        q.add(30);
+
+        System.out.println(q.peek());
+        System.out.println(q.poll());
+        System.out.println(q);
+    }
+}
 ```
 
 ## Question 36: Implement a Stack using the LinkedList class
@@ -53,5 +66,16 @@ class Main {
 ## Question 37: Check if two LinkedLists are equal
 
 ```java
+import java.util.*;
 
+class Main {
+    public static void main(String[] args) {
+        LinkedList<Integer> a = new LinkedList<>(Arrays.asList(1, 2, 3));
+        LinkedList<Integer> b = new LinkedList<>(Arrays.asList(1, 2, 3));
+        LinkedList<Integer> c = new LinkedList<>(Arrays.asList(3, 2, 1));
+
+        System.out.println(a.equals(b));
+        System.out.println(a.equals(c));
+    }
+}
 ```

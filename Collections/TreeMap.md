@@ -40,11 +40,38 @@ class Main {
 ## Question 32: Create a TreeMap of words to their frequencies in a given text
 
 ```java
+import java.util.*;
 
+class Main {
+    public static void main(String[] args) {
+        String text = "the cat and the dog and the bird";
+
+        Map<String, Integer> freq = new TreeMap<>();
+        for (String word : text.split(" ")) {
+            freq.put(word, freq.getOrDefault(word, 0) + 1);
+        }
+
+        System.out.println(freq);
+    }
+}
 ```
 
 ## Question 33: Create a TreeMap of student IDs to their details
 
 ```java
+import java.util.*;
 
+class Main {
+    public static void main(String[] args) {
+        Map<Integer, String> students = new TreeMap<>();
+        students.put(103, "Riya");
+        students.put(101, "Aman");
+        students.put(102, "Kabir");
+
+        System.out.println(students.get(102));
+        for (Map.Entry<Integer, String> e : students.entrySet()) {
+            System.out.println(e.getKey() + " -> " + e.getValue());
+        }
+    }
+}
 ```
